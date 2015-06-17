@@ -5,6 +5,10 @@ void setUp(void){}
 
 void tearDown(void){}
 
+/*
+head ->null
+tail ->null
+*/
 void test_create_stack(){
   Stack *stack =stackCreate();
 
@@ -14,6 +18,14 @@ void test_create_stack(){
   TEST_ASSERT_NULL(stack->tail);
   
 }
+
+
+/*
+head ->null
+tail ->null
+
+elem->11
+*/
 void test_create_new_item_11(){
   StackElement *elem = stackElementCreate(11);
   
@@ -21,6 +33,12 @@ void test_create_new_item_11(){
   TEST_ASSERT_NULL(elem->next);
 }
 
+
+/*
+head ->
+tail -><11>
+------
+*/
 void test_empty_stack_add_one_element_11(){
   Stack *stack =stackCreate();
   StackElement *elem =stackElementCreate(11);
@@ -35,7 +53,11 @@ void test_empty_stack_add_one_element_11(){
 
     
 }
-
+/*
+head -><22>
+tail -><11>
+------
+*/
 void test_empty_add_two_element_11_22(){
   Stack *stack =stackCreate();
   StackElement *elem =stackElementCreate(11);
@@ -49,6 +71,13 @@ void test_empty_add_two_element_11_22(){
   TEST_ASSERT_NULL(stack->tail->next);
   
 }
+
+/*
+head -> <33>
+        <22>
+tail -> <11>
+------
+*/
 void test_empty_add_three_element_11_22_33(){
   Stack *stack =stackCreate();
   StackElement *elem0=stackElementCreate(11);
@@ -64,6 +93,16 @@ void test_empty_add_three_element_11_22_33(){
   TEST_ASSERT_NULL(stack->tail->next);
   
 }
+
+
+/*
+
+head -> <22>
+tail -> <11>
+
+temp-><33> (and deleted)
+------
+*/
 
 void test_empty_add_three_element_11_22_33with_1delete_action(){
   Stack *stack =stackCreate();
@@ -82,6 +121,19 @@ void test_empty_add_three_element_11_22_33with_1delete_action(){
   
 }
 
+
+/*
+
+head -> <22>
+tail -> <11>
+temp-><33> (and deleted)
+====VVVVV====
+head -> 
+tail -> <11>
+temp-><22> (and deleted)
+
+------
+*/
 void test_empty_add_three_element_11_22_33with_2delete_action(){
   Stack *stack =stackCreate();
   StackElement *elem0 =stackElementCreate(11);
