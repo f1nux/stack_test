@@ -1,0 +1,32 @@
+---
+:source:
+  :path: test
+  :file: test_dpt1.c
+:successes:
+- :test: test_create_stack
+  :line: 8
+  :message: ''
+- :test: test_create_new_item
+  :line: 18
+  :message: ''
+- :test: test_empty_stack_add_one_element_11
+  :line: 28
+  :message: ''
+- :test: test_empty_add_two_element_11_22
+  :line: 46
+  :message: ''
+- :test: test_empty_add_three_element_11_22_33
+  :line: 50
+  :message: ''
+- :test: test_with_3_stack_delete_top
+  :line: 54
+  :message: ''
+:failures: []
+:ignores: []
+:counts:
+  :total: 6
+  :passed: 6
+  :failed: 0
+  :ignored: 0
+:stdout:
+- ''

@@ -1,0 +1,2 @@
+build/*      //ignore this folder
+!build/this.txt
