@@ -43,34 +43,42 @@ void stackAdd(Stack *S,StackElement *elem){
     printf("Memory Error");
     return;
   }
-  
   StackElement *temp = malloc(sizeof(StackElement));
   temp    = S->head;
   S->head = elem; //classic swap
-
- 
-   // printf("%d\n",elem);
-    //  printf("%d",S->head);
-      
-    //  S->next=S->head;
- //S->head =elem;
+ // printf("%d\n",elem);
+ //  printf("%d",S->head);
   
+  if(S->length == 0){
+    S->head->next = NULL;
+    S->tail = elem;
+  }else S->head->next = temp;
   
-  
-  
-
-    
-    
-    (S->length)++;
-    //S->tail->next = NULL; 
+   S->length++; //counter
+   S->tail->next = NULL; 
+   
+  printf("when add%d",S->length);
   
 }
 
 
 
-StackElement *stackDel(Stack *stack){
-  
-    
+StackElement *stackDel(Stack *S){
+  StackElement *temp = malloc(sizeof(StackElement));
+
+
+  temp    = S->head;
+
+  if(S->length >=2)
+    S->head = S->head->next;
+  else{
+    S->head =NULL;
+    S->tail =NULL;
+  }
+
+   S->length--;
+   printf("delete%d",S->length);
+    free(temp);
 }
 
 

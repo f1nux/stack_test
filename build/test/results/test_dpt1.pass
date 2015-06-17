@@ -6,27 +6,35 @@
 - :test: test_create_stack
   :line: 8
   :message: ''
-- :test: test_create_new_item
+- :test: test_create_new_item_11
   :line: 17
   :message: ''
 - :test: test_empty_stack_add_one_element_11
   :line: 24
   :message: ''
 - :test: test_empty_add_two_element_11_22
-  :line: 35
-  :message: ''
-- :test: test_empty_add_three_element_11_22_33
   :line: 39
   :message: ''
-- :test: test_with_3_stack_delete_top
-  :line: 43
+- :test: test_empty_add_three_element_11_22_33
+  :line: 52
+  :message: ''
+- :test: test_empty_add_three_element_11_22_33with_1delete_action
+  :line: 68
+  :message: ''
+- :test: test_empty_add_three_element_11_22_33with_2delete_action
+  :line: 85
   :message: ''
 :failures: []
 :ignores: []
 :counts:
-  :total: 6
-  :passed: 6
+  :total: 7
+  :passed: 7
   :failed: 0
   :ignored: 0
 :stdout:
+- when add1
+- when add1when add2
+- when add1when add2when add3
+- when add1when add2when add3delete2
+- when add1when add2when add3delete2delete1
 - ''

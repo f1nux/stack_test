@@ -31,11 +31,12 @@ char* GlobalOrderError;
 extern void setUp(void);
 extern void tearDown(void);
 extern void test_create_stack(void);
-extern void test_create_new_item(void);
+extern void test_create_new_item_11(void);
 extern void test_empty_stack_add_one_element_11(void);
 extern void test_empty_add_two_element_11_22(void);
 extern void test_empty_add_three_element_11_22_33(void);
-extern void test_with_3_stack_delete_top(void);
+extern void test_empty_add_three_element_11_22_33with_1delete_action(void);
+extern void test_empty_add_three_element_11_22_33with_2delete_action(void);
 
 
 //=======Test Reset Option=====
@@ -52,11 +53,12 @@ int main(void)
 {
   UnityBegin("test_dpt1.c");
   RUN_TEST(test_create_stack, 8);
-  RUN_TEST(test_create_new_item, 17);
+  RUN_TEST(test_create_new_item_11, 17);
   RUN_TEST(test_empty_stack_add_one_element_11, 24);
-  RUN_TEST(test_empty_add_two_element_11_22, 35);
-  RUN_TEST(test_empty_add_three_element_11_22_33, 39);
-  RUN_TEST(test_with_3_stack_delete_top, 43);
+  RUN_TEST(test_empty_add_two_element_11_22, 39);
+  RUN_TEST(test_empty_add_three_element_11_22_33, 52);
+  RUN_TEST(test_empty_add_three_element_11_22_33with_1delete_action, 68);
+  RUN_TEST(test_empty_add_three_element_11_22_33with_2delete_action, 85);
 
   return (UnityEnd());
 }
