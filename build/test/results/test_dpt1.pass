@@ -7,19 +7,19 @@
   :line: 8
   :message: ''
 - :test: test_create_new_item
-  :line: 18
+  :line: 17
   :message: ''
 - :test: test_empty_stack_add_one_element_11
-  :line: 28
+  :line: 24
   :message: ''
 - :test: test_empty_add_two_element_11_22
-  :line: 46
+  :line: 35
   :message: ''
 - :test: test_empty_add_three_element_11_22_33
-  :line: 50
+  :line: 39
   :message: ''
 - :test: test_with_3_stack_delete_top
-  :line: 54
+  :line: 43
   :message: ''
 :failures: []
 :ignores: []

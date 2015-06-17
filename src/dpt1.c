@@ -2,6 +2,7 @@
 #include "string.h"
 #include "malloc.h"
 #include <assert.h>
+#include <stdio.h>
 
 /*typedef struct StackElement StackElement;//struct StackElement is called StackElement
 
@@ -27,23 +28,26 @@ int dpt1(){
 }
 
 StackElement *stackElementCreate(int input){
- StackElement * StackElement = malloc(sizeof(StackElement));
+  StackElement * StackElement = malloc(sizeof(StackElement));
   
   StackElement->data = input;
   StackElement->next = NULL;
   
   return StackElement; 
-  
-  
-  
 }
 
 
 void stackAdd(Stack *S,StackElement *elem){
+  
+  if(S==NULL||elem==NULL){
+    printf("Memory Error");
+    return;
+  }
+  
+  StackElement *temp = malloc(sizeof(StackElement));
+  temp    = S->head;
+  S->head = elem; //classic swap
 
- // S->head->data=elem;
- 
-  //S->tail =elem;
  
    // printf("%d\n",elem);
     //  printf("%d",S->head);
@@ -53,17 +57,19 @@ void stackAdd(Stack *S,StackElement *elem){
   
   
   
-};
+  
+
+    
+    
+    (S->length)++;
+    //S->tail->next = NULL; 
+  
+}
 
 
 
 StackElement *stackDel(Stack *stack){
   
-  
-  
-    
-    
-    
     
 }
 

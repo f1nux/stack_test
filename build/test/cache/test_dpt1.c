@@ -24,31 +24,39 @@ void test_create_stack(){
 
 
 
-
-
 }
 
 void test_create_new_item(){
 
-  StackElement *StackElement = stackElementCreate(2);
+  StackElement *elem = stackElementCreate(2);
 
 
 
-  UnityAssertEqualNumber((_U_SINT)((2)), (_U_SINT)((StackElement->data)), (((void *)0)), (_U_UINT)21, UNITY_DISPLAY_STYLE_INT);
+  UnityAssertEqualNumber((_U_SINT)((2)), (_U_SINT)((elem->data)), (((void *)0)), (_U_UINT)20, UNITY_DISPLAY_STYLE_INT);
 
-  if ((((StackElement->next)) == ((void *)0))) {} else {UnityFail( (" Expected NULL"), (_U_UINT)(_U_UINT)(_U_UINT)22);;};
-
-
-
-
-
-
+  if ((((elem->next)) == ((void *)0))) {} else {UnityFail( (" Expected NULL"), (_U_UINT)(_U_UINT)(_U_UINT)21);;};
 
 }
 
 
 
 void test_empty_stack_add_one_element_11(){
+
+  Stack *stack =stackCreate();
+
+  StackElement *elem =stackElementCreate(2);
+
+  stackAdd(stack,elem);
+
+
+
+
+
+
+
+
+
+
 
 }
 

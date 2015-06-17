@@ -52,11 +52,11 @@ int main(void)
 {
   UnityBegin("test_dpt1.c");
   RUN_TEST(test_create_stack, 8);
-  RUN_TEST(test_create_new_item, 18);
-  RUN_TEST(test_empty_stack_add_one_element_11, 28);
-  RUN_TEST(test_empty_add_two_element_11_22, 46);
-  RUN_TEST(test_empty_add_three_element_11_22_33, 50);
-  RUN_TEST(test_with_3_stack_delete_top, 54);
+  RUN_TEST(test_create_new_item, 17);
+  RUN_TEST(test_empty_stack_add_one_element_11, 24);
+  RUN_TEST(test_empty_add_two_element_11_22, 35);
+  RUN_TEST(test_empty_add_three_element_11_22_33, 39);
+  RUN_TEST(test_with_3_stack_delete_top, 43);
 
   return (UnityEnd());
 }

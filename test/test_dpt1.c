@@ -15,31 +15,21 @@ void test_create_stack(){
   
 }
 void test_create_new_item(){
-  StackElement *StackElement = stackElementCreate(2);
+  StackElement *elem = stackElementCreate(2);
   
-  TEST_ASSERT_EQUAL(2, StackElement->data);
-  TEST_ASSERT_NULL(StackElement->next);
- 
-  
-  
+  TEST_ASSERT_EQUAL(2, elem->data);
+  TEST_ASSERT_NULL(elem->next);
 }
 
 void test_empty_stack_add_one_element_11(){
- // Stack *stack =stackCreate();
- // StackElement *elem =stackElementCreate(2);
- // stackAdd(*stack,*elem);
- 
-
+  Stack *stack =stackCreate();
+  StackElement *elem =stackElementCreate(2);
+  stackAdd(stack,elem);
+  
+  
   
 
-  
     
-   
-
-
-  
-  
-  
 }
 
 void test_empty_add_two_element_11_22(){
