@@ -57,7 +57,7 @@ void stackAdd(Stack *S,StackElement *elem){
    S->length++; //counter
    S->tail->next = NULL; 
    
-  printf("when add%d",S->length);
+  //printf("when add%d",S->length);
   
 }
 
@@ -77,7 +77,7 @@ StackElement *stackDel(Stack *S){
   }
 
    S->length--;
-   printf("delete%d",S->length);
+   //printf("delete%d",S->length);
     free(temp);
 }
 
